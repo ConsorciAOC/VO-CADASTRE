@@ -147,8 +147,7 @@ cadastral completa. |
 | //listaBienesInmuebles/datosInmueble/bienInmuebleRustico/lcol/col/rcof/rc/car | Càrrec de la referència cadastral. |
 | //listaBienesInmuebles/datosInmueble/bienInmuebleRustico/lcol/col/rcof/rc/cc1 | Dígit de control 1 de la referència cadastral. |
 | //listaBienesInmuebles/datosInmueble/bienInmuebleRustico/lcol/col/rcof/rc/cc2 | Dígit de control 2 de la referència cadastral. |
-| //listaBienesInmuebles/datosInmueble/bienInmuebleRustico/lcol/col/rcof/rfin | Bloc de dades de la referència cadastral de la finca, en el cas de que la finca tingui més d’un immoble s’omplena aquest bloc amb la referència
-cadastral de 14 dígits. |
+| //listaBienesInmuebles/datosInmueble/bienInmuebleRustico/lcol/col/rcof/rfin | Bloc de dades de la referència cadastral de la finca, en el cas de que la finca tingui més d’un immoble s’omplena aquest bloc amb la referència cadastral de 14 dígits. |
 | //listaBienesInmuebles/datosInmueble/bienInmuebleRustico/lcol/col/rcof/rfin/pc1 | 1-7 dígits de la referència cadastral. |
 | //listaBienesInmuebles/datosInmueble/bienInmuebleRustico/lcol/col/rcof/rfin/pc2 | 8-14 dígits de la referència cadastral. |
 | //listaBienesInmuebles/datosInmueble/bienInmuebleRustico/lcol/col/ldp\_out | Bloc de dades del titular de la finca. |
