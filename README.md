@@ -104,7 +104,7 @@ De l’schema associat a la petició especifica, el servei informa les dades que
 | //peticioConsultaDades/DatosEntrada/referenciaRustica/cpp/cpa | Codi de parcel·la |
 
 
-### 3.1.2 Resposta – dades específiques
+### 3.1.2 Resposta – dades específiques <a name="3.1.2"></a>
 
 ![image](https://user-images.githubusercontent.com/32306731/144472742-57bd8913-56e7-43b7-933c-d77148dccb86.png)
 
@@ -196,7 +196,6 @@ persona amb nif o explicació d’absència de la identificació. |
 | //listaBienesInmuebles/datosInmueble/listaTitulares/titular/df/nem | Nombre d’entitat menor. |
 | //listaBienesInmuebles/datosInmueble/listaTitulares/titular/df/dir | Bloc de dades que conté l’informació de l’adreça. |
 | //listaBienesInmuebles/datosInmueble | Codi de la via. |
-
 | /listaTitulares/titular/df/dir/cv | |
 | //listaBienesInmuebles/datosInmueble/listaTitulares/titular/df/dir/tv | Tipus de via. |
 | //listaBienesInmuebles/datosInmueble/listaTitulares/titular/df/dir/nv | Nom de la via. |
@@ -256,7 +255,6 @@ persona amb nif o explicació d’absència de la identificació. |
 | //listaBienesInmuebles/datosInmueble/listaSubparcelas/subparcela | Bloc de dades que conté la informació sobre les subparcel·les. |
 | //listaBienesInmuebles/datosInmueble/listaSubparcelas/subparcela/cspr | Codi de la subparcel·la. |
 | //listaBienesInmuebles/datosInmueble/listaSubparcelas/subparcela/dspr | Bloc de dades que conté la informació sobre la subparcel·la. |
-
 | //listaBienesInmuebles/datosInmueble/listaSubparcelas/subparcela/dspr/ccc | Qualificació cadastral. |
 | //listaBienesInmuebles/datosInmueble/listaSubparcelas/subparcela/dspr/dcc | Denominació de la classe de cultiu. |
 | //listaBienesInmuebles/datosInmueble/listaSubparcelas/subparcela/dspr/ip | Intensitat productiva. |
@@ -284,172 +282,156 @@ persona amb nif o explicació d’absència de la identificació. |
 •	0040: IMPOSIBLE REALIZAR LA CONSULTA. EL NÚMERO MÁXIMO DE BIENES QUE PUEDEN VISUALIZARSE ES DE 6000. ACOTE LA BÚSQUEDA.
 •	0502: Error tècnic realitzant la consulta.
 
-## 3.2	Certificació de titularitat (CERTIFICACIO_TITULARITAT)
+## 3.2	Certificació de titularitat (CERTIFICACIO_TITULARITAT) <a name="3.2"></a>
 
-===================== CONTINUAR AQUI =====================
+Mitjançant aquesta modalitat s’obté una certificació de titularitat d’un bé immoble, és a dir, un
+document que certifica els immobles associats a un titular cadastral o bé, la circumstància de no
+figurar com a titular cadastral de bens immobles a la base de dades del Cadastre.
+La consulta es realitza per DNI o NIE tot i que es pot acotar l’àmbit de la consulta a una determinada
+Comunitat Autònoma, província i municipi. Addicionalment, també es pot limitar la consulta per
+tipologia dels bens immobles (urbans, rústics o de característiques especials).
 
-Mitjançantaquestamodalitats&#39;obtéunacertificaciódetitularitatd&#39;unbéimmoble,ésadir,undocument que certifica els immobles associats a un titular cadastral o bé, la circumstància de nofigurarcomatitular cadastraldebensimmobles a labasededadesdelCadastre.
+### 3.2.1 Petició <a name="3.2.1"></a>
 
-La consulta es realitza per DNI o NIE tot i que es pot acotar l&#39;àmbit de la consulta a una determinadaComunitatAutònoma,provínciaimunicipi.Addicionalment,tambéespotlimitarlaconsultapertipologia delsbensimmobles(urbans,rústicso decaracterístiques especials).
-
-    1.
-### Petició
-
-      1.
-#### Dadesgenèriques
+#### 3.2.1.1 Dades genèriques
 
 | _Element_ | _Descripció_ |
 | --- | --- |
-| //DatosGenericos/Titular/TipoDocumentacion | Tipusdedocumentació(DNI/NIF,NIEoCIF). |
+| //DatosGenericos/Titular/TipoDocumentacion | Tipus de documentació (DNI / NIF, NIE o CIF). |
 | //DatosGenericos/Titular/Documentacion | Documentació. |
 
-      1.
-#### Dadesespecífiques
+#### 3.2.1.2 Dades específiques
 
-L&#39;_schema_associatalapeticióespecificaesdetallaacontinuació.
+L’schema associat a la petició especifica es detalla a continuació.
 
-![](RackMultipart20211201-4-e3jz8z_html_f78babe07304dad7.png)
-
-| _Element_ | _Descripció_ |
-| --- | --- |
-| //DatosEntrada/ambito | Bloc de dades que engloba les dades delocalitzaciódel&#39;immoble. |
-| //DatosEntrada/ambito/ccaa | CodideComunitatAutònoma:
-01:ANDALUCIA02: ARAGON03: P.ASTURIAS04: ILLESBALEARS05:CANARIAS06:CANTABRIA07:CASTILLA-MANCHA08: CASTILLAYLEON09:CATALUNYA10:EXTREMADURA11:GALICIA12: C.MADRID13: R.MURCIA14: C.F.NAVARRA15: PAISVASCO16:LARIOJA17: C.VALENCIANA18: CEUTA19:MELILLA |
-| //DatosEntrada/ambito/cp | CodideprovínciasegonsINE. |
-| //DatosEntrada/ambito/cm | CodidemunicipisegonsINE. |
-| //DatosEntrada/cn | Tipusdebéimmoble(UR:urbà,RU:rústic,BI: |
+![image](https://user-images.githubusercontent.com/32306731/144576061-11c0c05b-2baf-4b67-a69e-dd6fce07d015.png)
 
 | _Element_ | _Descripció_ |
 | --- | --- |
-|
- | característiquesespecials). |
+| //DatosEntrada/ambito | Bloc de dades que engloba les dades de
+localització de l’immoble. |
+| //DatosEntrada/ambito/ccaa | Codi de Comunitat Autònoma: <lu><li>01: ANDALUCIA</li><li>02: ARAGON</li><li>03: P. ASTURIAS</li><li>04: ILLES BALEARS</li><li>05: CANARIAS</li><li>06: CANTABRIA</li><li>07: CASTILLA-MANCHA</li><li>08: CASTILLA Y LEON</li><li>09: CATALUNYA</li><li>10: EXTREMADURA</li><li>11: GALICIA</li><li>12: C. MADRID</li><li>13: R. MURCIA</li><li>14: C. F. NAVARRA</li><li>15: PAIS VASCO</li><li>16: LA RIOJA</li><li>17: C. VALENCIANA</li><li>18: CEUTA</li><li>19: MELILLA</li></lu> |
+| //DatosEntrada/ambito/cp | Codi de província segons INE. |
+| //DatosEntrada/ambito/cm | Codi de municipi segons INE. |
+| //DatosEntrada/cn | Tipus de bé immoble (UR: urbà, RU: rústic, BI: característiques especials).|
 
-    1.
-### Resposta–dadesespecífiques
+### 3.2.2 Resposta – dades específiques <a name="3.2.2"></a>
 
-![](RackMultipart20211201-4-e3jz8z_html_faa2ce28faf332a8.png)
+![image](https://user-images.githubusercontent.com/32306731/144576737-27ce3156-c2b2-486e-861e-81417778d57b.png)
 
-Del&#39;_schema_associatalarespostaespecifica,elserveiinformalesdadesqueesdetallenacontinuació.
-
-| _Element_ | _Descripció_ |
-| --- | --- |
-| //peticioCertificacioTitular | Bloc de dades que conté la petició específicaassociada a la resposta. Per més detallsconsulteul&#39;apartat anterior. |
-| //DatosSalida/pdf | PDFdelcertificatenbase64. |
-| //DatosSalida/listaNombres/nombreApellidos | Nom complertdeltitular. |
-| //resultat | Resultatdelaconsulta.Permésdetallsconsulteul&#39;apartat 3.2.2.1. |
-
-      1.
-#### Codisderesultat
-
-- 0003:TRAMITADA.Titularlocalitzat.
-- 0007:IMPOSIBLEREALIZARLACONSULTA.ELNÚMEROMÁXIMODEBIENESQUEPUEDEN CERTIFICAR ES DE 6000. ACOTE LA BUSQUEDA O DIRÍJASE A LA GERENCIATERRITORIALCORRESPONDIENTE.
-- 0008: IMPOSIBLE REALIZAR LA CONSULTA . EL ÁMBITO ELEGIDO NO SE ENCUENTRADENTRODELÁMBITO TERRITORIALDELUSUARIO.
-- 0013:NOEXISTEDELEGACION PARALOSDATOSINTRODUCIDOS.
-- 0015:ELNIFINTRODUCIDONOSEENCUENTRAENLA BASEDE DATOS.
-- 0016:ELNIFINTRODUCIDOTIENEASOCIADOSMÁSDEUNAPELLIDOSYNOMBRE.
-- 0502:Errortècnicrealitzantlaconsulta.
-
-  1.
-## Certificaciódescriptivaigràfica(DESCRIPTIVA\_GRAFICA)
-
-Mitjançantaquestamodalitats&#39;obtéunacertificaciódescriptivaigraficad&#39;unbéimmoble.
-
-Laconsultaesrealitzaapartirdelaprovíncia,municipiilareferènciacadastralolareferènciarústica.
-
-    1.
-### Petició
-
-      1.
-#### Dadesespecífiques
-
-L&#39;_schema_associatalapeticióespecificaesdetallaacontinuació.
-
-![](RackMultipart20211201-4-e3jz8z_html_6721555f18223409.png)
+De l’schema associat a la resposta especifica, el servei informa les dades que es detallen a
+continuació.
 
 | _Element_ | _Descripció_ |
 | --- | --- |
-| //peticioDescriptivaIGrafica/DatosEntrada/localizacionINE | Bloc de dades que conté els codis de provincia imunicipisegonsl&#39;INE |
-| //peticioDescriptivaIGrafica/DatosEntrada/localizacionINE/cp | CodideprovinciadelINE |
-| //peticioDescriptivaIGrafica/DatosEntrada/localizacionINE/cm | Codidemunicipidel INE |
+| //peticioCertificacioTitular | Bloc de dades que conté la petició específica associada a la resposta. Per més detalls consulteu l’apartat anterior. |
+| //DatosSalida/pdf | PDF del certificat en base 64. |
+| //DatosSalida/listaNombres/nombreApellidos | Nom complert del titular. |
+| //resultat | Resultat de la consulta. Per més detalls consulteu l’apartat 3.2.2.1. |
+
+#### 3.2.2.1 Codis de resultat
+
+· 0003: TRAMITADA. Titular localitzat.
+· 0007: IMPOSIBLE REALIZAR LA CONSULTA . EL NÚMERO MÁXIMO DE BIENES QUE PUEDEN CERTIFICAR ES DE 6000. ACOTE LA BUSQUEDA O DIRÍJASE A LA GERENCIA TERRITORIAL CORRESPONDIENTE.
+· 0008: IMPOSIBLE REALIZAR LA CONSULTA . EL ÁMBITO ELEGIDO NO SE ENCUENTRA DENTRO DEL ÁMBITO TERRITORIAL DEL USUARIO.
+· 0013: NO EXISTE DELEGACION PARA LOS DATOS INTRODUCIDOS.
+· 0015: EL NIF INTRODUCIDO NO SE ENCUENTRA EN LA BASE DE DATOS.
+· 0016: EL NIF INTRODUCIDO TIENE ASOCIADOS MÁS DE UN APELLIDOS Y NOMBRE.
+· 0502: Error tècnic realitzant la consulta.
+
+
+## 3.3 Certificació descriptiva i gràfica (DESCRIPTIVA_GRAFICA) <a name="3.3"></a>
+
+Mitjançant aquesta modalitat s’obté una certificació descriptiva i grafica d’un bé immoble.
+
+La consulta es realitza a partir de la província, municipi i la referència cadastral o la referència rústica.
+
+### 3.3.1 Petició <a name="3.3.1"></a>
+
+#### 3.3.1.1 Dades específiques
+
+L’schema associat a la petició especifica es detalla a continuació.
+
+![image](https://user-images.githubusercontent.com/32306731/144579009-7a96cc0b-3c61-49fe-824a-83d8a4fbbbbe.png)
+
+| _Element_ | _Descripció_ |
+| --- | --- |
+| //peticioDescriptivaIGrafica/DatosEntrada/localizacionINE | Bloc de dades que conté els codis de provincia i
+municipi segons l’INE |
+| //peticioDescriptivaIGrafica/DatosEntrada/localizacionINE/cp | Codi de provincia del INE |
+| //peticioDescriptivaIGrafica/DatosEntrada/localizacionINE/cm | Codi de municipi del INE |
 | //peticioDescriptivaIGrafica/DatosEntrada/referenciaCatastral | Bloc de dades que engloba la informació de lareferènciacadastral. |
-| //peticioDescriptivaIGrafica/DatosEntrada/referenciaCatastral/Pc1 | 1-7dígitsdelareferènciacadastral. |
-| //peticioDescriptivaIGrafica/DatosEntrada/referenciaCatastral/Pc2 | 8-14dígitsdelareferènciacadastral. |
-| //peticioDescriptivaIGrafica/DatosEntrada/referenciaCatastral/car | Càrrecdelareferènciacadastral. |
+| //peticioDescriptivaIGrafica/DatosEntrada/referenciaCatastral/Pc1 | 1-7 dígits de la referència cadastral. |
+| //peticioDescriptivaIGrafica/DatosEntrada/referenciaCatastral/Pc2 | 8-14 dígits de la referència cadastral. |
+| //peticioDescriptivaIGrafica/DatosEntrada/referenciaCatastral/car | Càrrec de la referència cadastral. |
+| //peticioDescriptivaIGrafica/DatosEntrada/referenciaCatastral/Cc1 | Dígit de control 1 de la referència cadastral. |
+| //peticioDescriptivaIGrafica/DatosEntrada/referenciaCatastral/Cc2 | Dígit de control 2 de la referència cadastral. |
+| //peticioDescriptivaIGrafica/DatosEntrada/referenciaRustica | Bloc de dades que engloba la informació de la referència Rustica |
+| //peticioDescriptivaIGrafica/DatosEntrada/referenciaRustica/cpo | Codi de polígon |
+| //peticioDescriptivaIGrafica/DatosEntrada/referenciaRustica/cpa | Codi de parcel·la |
+
+
+### 3.3.2 Resposta – dades específiques <a name="3.3.2"></a>
+
+![image](https://user-images.githubusercontent.com/32306731/144580001-4e17e452-58f0-4ca5-a3f4-d1fec7332b27.png)
+
+De l’schema associat a la resposta especifica, el servei informa les dades que es detallen a
+continuació.
 
 | _Element_ | _Descripció_ |
 | --- | --- |
-| //peticioDescriptivaIGrafica/DatosEntrada/referenciaCatastral/Cc1 | Dígitdecontrol1delareferènciacadastral. |
-| //peticioDescriptivaIGrafica/DatosEntrada/referenciaCatastral/Cc2 | Dígitdecontrol2delareferènciacadastral. |
-| //peticioDescriptivaIGrafica/DatosEntrada/referenciaRustica | Bloc de dades que engloba la informació de lareferènciaRustica |
-| //peticioDescriptivaIGrafica/DatosEntrada/referenciaRustica/cpo | Codidepolígon |
-| //peticioDescriptivaIGrafica/DatosEntrada/referenciaRustica/cpa | Codideparcel·la |
+| //peticioDescriptivaIGrafica | Bloc de dades que conté la petició específica associada a la resposta. Per més detalls consulteu l’apartat anterior. |
+| //DatosSalida/pdf | PDF del certificat en base 64. |
+| //resultat | Resultat de la consulta. Per més detalls consulteu l’apartat 3.2.2.1. |
 
-    1.
-### Resposta–dadesespecífiques
 
-![](RackMultipart20211201-4-e3jz8z_html_5f4a7879561a8346.png)
+#### 3.3.2.1 Codis de resultat
 
-Del&#39;_schema_associatalarespostaespecifica,elserveiinformalesdadesqueesdetallenacontinuació.
+· 0003: TRAMITADA.
+· 0014: REFERENCIA CATASTRAL INVÁLIDA (O NO TIENE 14, 18 NI 20 DÍGITOS).
+· 0017: EL INMUEBLE NO EXISTE.
+· 0018: AVISO: LA REFERENCIA CATASTRAL SOLICITADA HA SIDO MODIFICADA. LA NUEVA REFERENCIA CORRESPONDIENTE AL INMUEBLE ES:
+· 0019: EL BIEN NO SE ENCUENTRA EN EL ÁMBITO TERRITORIAL DE CONSULTA DEL USUARIO.
+· 0020: NO HAY BIENES PARA LOS DATOS DE ENTRADA.
+· 0021: EXISTE MÁS DE UN BIEN INMUEBLE PARA LOS DATOS DE ENTRADA. HAGA LA BÚSQUEDA POR REFERENCIA CATASTRAL.
+· 0022: NO ES POSIBLE LA EMISION DE LA CERTIFICACION DESCRIPTIVA Y GRAFICA PORQUE SE HA DETECTADO UNA INCONSISTENCIA EN LAS BASES DE DATOS CATASTRALES. LA CERTIFICACION PUEDE SER SOLICITADA EN LA GERENCIA O SUBGERENCIA DEL CATASTRO, DONDE SERA EMITIDA UNA VEZ CORREGIDAS DICHAS INCONSISTENCIAS.
+· 0023: CARTOGRAFÍA NO DISPONIBLE PARA DICHO MUNICIPIO.
+· 0024: NO EXISTE CARTOGRAFÍA DIGITAL ASOCIADA A ESA FINCA.
+· 0502: Error tècnic realitzant la consulta.
 
-| _Element_ | _Descripció_ |
-| --- | --- |
-| //peticioDescriptivaIGrafica | Bloc de dades que conté la petició específicaassociada a la resposta. Per més detallsconsulteul&#39;apartat anterior. |
-| //DatosSalida/pdf | PDFdelcertificatenbase64. |
-| //resultat | Resultatdelaconsulta.Permésdetallsconsulteul&#39;apartat 3.2.2.1. |
+## 3.4 Obtenció d’un document mitjançant CSV (DOCUMENT_CSV) <a name="3.4"></a>
 
-      1.
-#### Codisderesultat
+Aquesta modalitat proporciona un documento en PDF generat (i catalogat), mitjançant el seu CSV (codi segur de verificació).
 
-- 0003:TRAMITADA.
-- 0014:REFERENCIACATASTRALINVÁLIDA(ONOTIENE14,18NI20DÍGITOS).
-- 0017:ELINMUEBLENOEXISTE.
-- 0018:AVISO:LAREFERENCIACATASTRALSOLICITADAHASIDOMODIFICADA.LANUEVAREFERENCIACORRESPONDIENTEALINMUEBLEES:
-- 0019:ELBIENNOSEENCUENTRAENELÁMBITOTERRITORIALDECONSULTADELUSUARIO.
-- 0020:NOHAYBIENES PARALOSDATOSDEENTRADA.
+### 3.4.1 Petició <a name="3.4.1"></a>
 
-- 0021: EXISTE MÁS DE UN BIEN INMUEBLE PARA LOS DATOS DE ENTRADA. HAGA LABÚSQUEDAPORREFERENCIACATASTRAL.
-- 0022:NOESPOSIBLELAEMISIONDELACERTIFICACIONDESCRIPTIVAYGRAFICAPORQUESEHADETECTADOUNAINCONSISTENCIAENLASBASESDEDATOSCATASTRALES.LACERTIFICACIONPUEDESERSOLICITADAENLAGERENCIAOSUBGERENCIA DEL CATASTRO, DONDE SERA EMITIDA UNA VEZ CORREGIDAS DICHASINCONSISTENCIAS.
-- 0023:CARTOGRAFÍANODISPONIBLEPARADICHOMUNICIPIO.
-- 0024:NOEXISTECARTOGRAFÍADIGITALASOCIADAAESAFINCA.
-- 0502:Errortècnicrealitzantlaconsulta.
+#### 3.4.1.1 Dades específiques
 
-  1.
-## Obtenciód&#39;undocumentmitjançantCSV(DOCUMENT\_CSV)
+L’schema associat a la petició especifica es detalla a continuació.
 
-Aquesta modalitat proporciona un documento en PDF generat (i catalogat), mitjançant el seu CSV(codisegur deverificació).
-
-    1.
-### Petició
-
-      1.
-#### Dadesespecífiques
-
-L&#39;_schema_associatalapeticióespecificaesdetallaacontinuació.
-
-![](RackMultipart20211201-4-e3jz8z_html_248f111da41b6ae6.png)
+![image](https://user-images.githubusercontent.com/32306731/144580513-21330ea7-6464-47d2-87a7-ec1253d59d77.png)
 
 | _Element_ | _Descripció_ |
 | --- | --- |
-| //peticioDocumentCSV/CSV | Codisegurdeverificació(16dígits). |
+| //peticioDocumentCSV/CSV | Codi segur de verificació (16 dígits). |
 
-    1.
-### Resposta–dadesespecífiques
+### 3.4.2 Resposta – dades específiques <a name="3.4.2"></a>
 
-![](RackMultipart20211201-4-e3jz8z_html_5520a3b9eea12e39.png)
+![image](https://user-images.githubusercontent.com/32306731/144580617-521773eb-78af-4016-9555-4f8aaee799d5.png)
 
-Del&#39;_schema_associatalarespostaespecifica,elserveiinformalesdadesqueesdetallenacontinuació.
+De l’schema associat a la resposta especifica, el servei informa les dades que es detallen a
+continuació.
 
 | _Element_ | _Descripció_ |
 | --- | --- |
-| //peticioDocumentCSV | Bloc dedadesquecontélapeticióespecíficaassociadaalaresposta.Permésdetallsconsulteul&#39;apartatanterior. |
-| //pdf | PDFgenerat(enbase64). |
-| //resultat | Resultatdelaconsulta.Permésdetallsconsulteul&#39;apartat3.4.2.1 |
+| //peticioDocumentCSV | Bloc de dades que conté la petició específica associada a la resposta. Per més detalls consulteu l’apartat anterior. |
+| //pdf | PDF generat (en base 64). |
+| //resultat | Resultat de la consulta. Per més detalls consulteu l’apartat 3.4.2.1 |
 
-      1.
-#### Codisderesultat
+#### 3.4.2.1 Codis de resultat
 
-- 0003:TRAMITADA.CSVlocalitzat.
-- 2:NUMERO MAXIMO DEINTENTOSFALLIDOS
-- 3:NOEXISTEELDOCUMENTOSOLICITADOEN ELCATALOGO.
-- 4:ERRORALGRABAR ELNÚMERODEPETICIONESCSV
-- 0502:Errortècnicrealitzantlaconsulta.
+· 0003: TRAMITADA. CSV localitzat.
+· 2: NUMERO MAXIMO DE INTENTOS FALLIDOS
+· 3: NO EXISTE EL DOCUMENTO SOLICITADO EN EL CATALOGO.
+· 4: ERROR AL GRABAR EL NÚMERO DE PETICIONES CSV
+· 0502: Error tècnic realitzant la consulta.
