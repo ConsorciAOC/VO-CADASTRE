@@ -51,8 +51,11 @@ A continuació es detalla la missatgeria corresponent al les modalitats de consu
 ![image](https://user-images.githubusercontent.com/32306731/144471771-e8a0a800-f1f3-43a0-803f-cda9217aa337.png) L’emissor de les dades requereix que s’informin les dades del funcionari que realitza la consulta. Així, cal informar els següents camps de l’element Funcionario del bloc de dades genèriques:
 
 /Peticion/Funcionario/NombreCompletoFuncionario,
+
 /Peticion/Funcionario/NifFuncionario,
+
 //SolicitudTransmision/DatosGenericos/Solicitante/Funcionario/NombreCompletoFuncionario 
+
 //SolicitudTransmision/DatosGenericos/Solicitante/Funcionario/NifFuncionario
 
 ## 3.1 Consulta de dades cadastrals (DADES_CADASTRALS) <a name="3.1"></a>
