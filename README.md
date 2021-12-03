@@ -27,7 +27,6 @@ Per poder realitzar la integració cal conèixer prèviament la següent documen
 
 · Document d’Especificació de missatgeria pel consum de productes de la plataforma PCI del Consorci AOC.
 
-
 # 2 Transmissions de dades disponibles <a name="2"></a>
 
 Les dades disponibles a través del servei són les que es presenten a continuació:
@@ -45,7 +44,6 @@ Les dades disponibles a través del servei són les que es presenten a continuac
 
 La modalitat de consulta de dades cadastrals té disponible la versió imprimible del resultat de la consulta en format PDF. Per més detalls adreceu-vos a l’apartat Extensions de missatgeria del document de missatgeria genèrica.
 
-
 # 3 Missatgeria dels serveis <a name="3"></a>
 
 A continuació es detalla la missatgeria corresponent al les modalitats de consum del producte CADASTRE.
@@ -57,10 +55,10 @@ A continuació es detalla la missatgeria corresponent al les modalitats de consu
 //SolicitudTransmision/DatosGenericos/Solicitante/Funcionario/NombreCompletoFuncionario 
 //SolicitudTransmision/DatosGenericos/Solicitante/Funcionario/NifFuncionario
 
-
 ## 3.1 Consulta de dades cadastrals (DADES_CADASTRALS) <a name="3.1"></a>
 
 Aquesta modalitat permet consultar informació de dades cadastrals d’acord als següents criteris de cerca:
+
 •	Dades del titular
 
 •	Referència cadastral i/o referència rústica
@@ -262,30 +260,13 @@ persona amb nif o explicació d’absència de la identificació. |
 
 #### 3.1.2.1 Codis de resultat
 
-•	0003: TRAMITADA. Titular localitzat.
-•	0012: ERROR AL RECUPERAR DATOS DEL BIEN.
-•	0013: ERROR AL RECUPERAR LAS SUBPARCELAS.
-•	0017: EL INMUEBLE NO EXISTE.
-•	0018: AVISO: LA REFERENCIA CATASTRAL SOLICITADA HA SIDO MODIFICADA. LA NUEVA REFERENCIA CORRESPONDIENTE AL INMUEBLE ES:…
-•	0020: NO HAY BIENES PARA LOS DATOS DE ENTRADA.
-•	0021: EL NIF NO TIENE INMUEBLES ASOCIADOS DENTRO DEL AMBITO TERRITORIAL DE LA CONSULTA, AUNQUE SI FUERA DE ESTE.
-•	0022: EL NIF TIENE INMUEBLES ASOCIADOS FUERA DEL AMBITO TERRITORIAL DE LA CONSULTA.
-•	0025: EL NIF NO TIENE INMUEBLES ASOCIADOS.
-•	0026: EL NIF CON LOS APELLIDOS Y NOMBRE NO TIENE INMUEBLES ASOCIADOS.
-•	0027: ERROR AL RECUPERAR DATOS DE TITULARES.
-•	0029: ERROR AL RECUPERAR DATOS DE LA FINCA.
-•	0030: ERROR AL RECUPERAR DATOS DE LOCALES.
-•	0040: IMPOSIBLE REALIZAR LA CONSULTA. EL NÚMERO MÁXIMO DE BIENES QUE PUEDEN VISUALIZARSE ES DE 6000. ACOTE LA BÚSQUEDA.
-•	0502: Error tècnic realitzant la consulta.
+<lu><li>0003: TRAMITADA. Titular localitzat.</li><li>0012: ERROR AL RECUPERAR DATOS DEL BIEN.</li><li>0013: ERROR AL RECUPERAR LAS SUBPARCELAS.</li><li>0017: EL INMUEBLE NO EXISTE.</li><li>0018: AVISO: LA REFERENCIA CATASTRAL SOLICITADA HA SIDO MODIFICADA. LA NUEVA REFERENCIA CORRESPONDIENTE AL INMUEBLE ES:…<li>0020: NO HAY BIENES PARA LOS DATOS DE ENTRADA.<li>0021: EL NIF NO TIENE INMUEBLES ASOCIADOS DENTRO DEL AMBITO TERRITORIAL DE LA CONSULTA, AUNQUE SI FUERA DE ESTE.<li>0022: EL NIF TIENE INMUEBLES ASOCIADOS FUERA DEL AMBITO TERRITORIAL DE LA CONSULTA.<li>0025: EL NIF NO TIENE INMUEBLES ASOCIADOS.<li>0026: EL NIF CON LOS APELLIDOS Y NOMBRE NO TIENE INMUEBLES ASOCIADOS.<li>0027: ERROR AL RECUPERAR DATOS DE TITULARES.<li>0029: ERROR AL RECUPERAR DATOS DE LA FINCA.<li>0030: ERROR AL RECUPERAR DATOS DE LOCALES.<li>0040: IMPOSIBLE REALIZAR LA CONSULTA. EL NÚMERO MÁXIMO DE BIENES QUE PUEDEN VISUALIZARSE ES DE 6000. ACOTE LA BÚSQUEDA.<li>0502: Error tècnic realitzant la consulta.</li></lu>
 
 ## 3.2	Certificació de titularitat (CERTIFICACIO_TITULARITAT) <a name="3.2"></a>
 
-Mitjançant aquesta modalitat s’obté una certificació de titularitat d’un bé immoble, és a dir, un
-document que certifica els immobles associats a un titular cadastral o bé, la circumstància de no
-figurar com a titular cadastral de bens immobles a la base de dades del Cadastre.
-La consulta es realitza per DNI o NIE tot i que es pot acotar l’àmbit de la consulta a una determinada
-Comunitat Autònoma, província i municipi. Addicionalment, també es pot limitar la consulta per
-tipologia dels bens immobles (urbans, rústics o de característiques especials).
+Mitjançant aquesta modalitat s’obté una certificació de titularitat d’un bé immoble, és a dir, un document que certifica els immobles associats a un titular cadastral o bé, la circumstància de no figurar com a titular cadastral de bens immobles a la base de dades del Cadastre.
+
+La consulta es realitza per DNI o NIE tot i que es pot acotar l’àmbit de la consulta a una determinada Comunitat Autònoma, província i municipi. Addicionalment, també es pot limitar la consulta per tipologia dels bens immobles (urbans, rústics o de característiques especials).
 
 ### 3.2.1 Petició <a name="3.2.1"></a>
 
@@ -327,13 +308,14 @@ continuació.
 
 #### 3.2.2.1 Codis de resultat
 
-· 0003: TRAMITADA. Titular localitzat.
-· 0007: IMPOSIBLE REALIZAR LA CONSULTA . EL NÚMERO MÁXIMO DE BIENES QUE PUEDEN CERTIFICAR ES DE 6000. ACOTE LA BUSQUEDA O DIRÍJASE A LA GERENCIA TERRITORIAL CORRESPONDIENTE.
-· 0008: IMPOSIBLE REALIZAR LA CONSULTA . EL ÁMBITO ELEGIDO NO SE ENCUENTRA DENTRO DEL ÁMBITO TERRITORIAL DEL USUARIO.
-· 0013: NO EXISTE DELEGACION PARA LOS DATOS INTRODUCIDOS.
-· 0015: EL NIF INTRODUCIDO NO SE ENCUENTRA EN LA BASE DE DATOS.
-· 0016: EL NIF INTRODUCIDO TIENE ASOCIADOS MÁS DE UN APELLIDOS Y NOMBRE.
-· 0502: Error tècnic realitzant la consulta.
+<lu><li></li></lu>
+<li>0003: TRAMITADA. Titular localitzat.
+<li>0007: IMPOSIBLE REALIZAR LA CONSULTA . EL NÚMERO MÁXIMO DE BIENES QUE PUEDEN CERTIFICAR ES DE 6000. ACOTE LA BUSQUEDA O DIRÍJASE A LA GERENCIA TERRITORIAL CORRESPONDIENTE.
+<li>0008: IMPOSIBLE REALIZAR LA CONSULTA . EL ÁMBITO ELEGIDO NO SE ENCUENTRA DENTRO DEL ÁMBITO TERRITORIAL DEL USUARIO.
+<li>0013: NO EXISTE DELEGACION PARA LOS DATOS INTRODUCIDOS.
+<li>0015: EL NIF INTRODUCIDO NO SE ENCUENTRA EN LA BASE DE DATOS.
+<li>0016: EL NIF INTRODUCIDO TIENE ASOCIADOS MÁS DE UN APELLIDOS Y NOMBRE.
+<li>0502: Error tècnic realitzant la consulta. </li></lu>
 
 ## 3.3 Certificació descriptiva i gràfica (DESCRIPTIVA_GRAFICA) <a name="3.3"></a>
 
