@@ -38,7 +38,7 @@ Les dades disponibles a través del servei són les que es presenten a continuac
 
 | **PRODUCTE** | **MODALITAT** | **DESCRIPCIO** |
 | --- | --- | --- |
-| **CADASTRE** | DADES CADASTRALS _ | Certificat de consulta de dades cadastrals. |
+| **CADASTRE** | DADES_CADASTRALS | Certificat de consulta de dades cadastrals. |
 | **CADASTRE** | CERTIFICACIO_TITULARITAT | Certificació de titularitat d’un bé immoble. |
 | **CADASTRE** | DESCRIPTIVA_GRAFICA | Certificació descriptiva i gràfica d’un immoble. |
 | **CADASTRE** | DOCUMENT_CSV | Obtenció del document associat a un CSV. |
@@ -54,7 +54,7 @@ A continuació es detalla la missatgeria corresponent al les modalitats de consu
 
 /Peticion/Funcionario/NombreCompletoFuncionario,
 /Peticion/Funcionario/NifFuncionario,
-//SolicitudTransmision/DatosGenericos/Solicitante/Funcionario/NombreCompletoFuncionario i
+//SolicitudTransmision/DatosGenericos/Solicitante/Funcionario/NombreCompletoFuncionario 
 //SolicitudTransmision/DatosGenericos/Solicitante/Funcionario/NifFuncionario
 
 
@@ -70,7 +70,6 @@ Aquesta modalitat permet consultar informació de dades cadastrals d’acord als
 #### 3.1.1.1 Dades genèriques – consulta per dades de titular
 
 Si	es	desitja	fer	la	consulta	per	dades	del	titular,	cal	informar	el	bloc	de	dades DatosGenericos/Titular de la missatgeria genèrica.
-
 
 | _Element_ | _Descripció_ |
 | --- | --- |
@@ -139,8 +138,7 @@ De l’schema associat a la resposta especifica, el servei informa les dades que
 | //listaBienesInmuebles/datosInmueble/bienInmuebleRustico/lcol | Bloc de dades de les finques confrontants al bé immoble. |
 | //listaBienesInmuebles/datosInmueble/bienInmuebleRustico/lcol/col | Bloc de dades de la finca confrontant. |
 | //listaBienesInmuebles/datosInmueble/bienInmuebleRustico/lcol/col/rcof | Bloc de dades de la referència cadastral de la finca confrontant. |
-| //listaBienesInmuebles/datosInmueble/bienInmuebleRustico/lcol/col/rcof/rc | Bloc de dades de la referència cadastral de la finca, en el cas que la finca només tingui un immoble s’omplena aquest bloc amb la referència
-cadastral completa. |
+| //listaBienesInmuebles/datosInmueble/bienInmuebleRustico/lcol/col/rcof/rc | Bloc de dades de la referència cadastral de la finca, en el cas que la finca només tingui un immoble s’omplena aquest bloc amb la referència cadastral completa. |
 | //listaBienesInmuebles/datosInmueble | 1-7 dígits de la referència cadastral. |
 | /bienInmuebleRustico/lcol/col/rcof/rc/Pc1 | |
 | //listaBienesInmuebles/datosInmueble/bienInmuebleRustico/lcol/col/rcof/rc/Pc2 | 8-14 dígits de la referència cadastral. |
@@ -262,7 +260,6 @@ persona amb nif o explicació d’absència de la identificació. |
 | //respostaConsultaDades/resultat/codiResultat | Codi resultat de la resposta. |
 | //respostaConsultaDades/resultat/descripcio | Descripció de l’estat de la resposta. |
 
-
 #### 3.1.2.1 Codis de resultat
 
 •	0003: TRAMITADA. Titular localitzat.
@@ -338,7 +335,6 @@ continuació.
 · 0016: EL NIF INTRODUCIDO TIENE ASOCIADOS MÁS DE UN APELLIDOS Y NOMBRE.
 · 0502: Error tècnic realitzant la consulta.
 
-
 ## 3.3 Certificació descriptiva i gràfica (DESCRIPTIVA_GRAFICA) <a name="3.3"></a>
 
 Mitjançant aquesta modalitat s’obté una certificació descriptiva i grafica d’un bé immoble.
@@ -369,7 +365,6 @@ municipi segons l’INE |
 | //peticioDescriptivaIGrafica/DatosEntrada/referenciaRustica/cpo | Codi de polígon |
 | //peticioDescriptivaIGrafica/DatosEntrada/referenciaRustica/cpa | Codi de parcel·la |
 
-
 ### 3.3.2 Resposta – dades específiques <a name="3.3.2"></a>
 
 ![image](https://user-images.githubusercontent.com/32306731/144580001-4e17e452-58f0-4ca5-a3f4-d1fec7332b27.png)
@@ -382,7 +377,6 @@ continuació.
 | //peticioDescriptivaIGrafica | Bloc de dades que conté la petició específica associada a la resposta. Per més detalls consulteu l’apartat anterior. |
 | //DatosSalida/pdf | PDF del certificat en base 64. |
 | //resultat | Resultat de la consulta. Per més detalls consulteu l’apartat 3.2.2.1. |
-
 
 #### 3.3.2.1 Codis de resultat
 
