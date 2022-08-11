@@ -25,7 +25,10 @@ Aquest document detalla la missatgeria associada al servei de la Dirección Gene
 
 Per poder realitzar la integració cal conèixer prèviament la següent documentació:
 
-· Document d’Especificació de missatgeria pel consum de productes de la plataforma PCI del Consorci AOC.
+- [Document de Missatgeria Genèrica de la PCI del Consorci AOC.][PCI]
+
+[PCI]:https://github.com/ConsorciAOC/PCI
+
 
 # 2 Transmissions de dades disponibles <a name="2"></a>
 
@@ -307,11 +310,11 @@ continuació.
 | //peticioCertificacioTitular | Bloc de dades que conté la petició específica associada a la resposta. Per més detalls consulteu l’apartat anterior. |
 | //DatosSalida/pdf | PDF del certificat en base 64. |
 | //DatosSalida/listaNombres/nombreApellidos | Nom complert del titular. |
-| //resultat | Resultat de la consulta. Per més detalls consulteu l’apartat 3.2.2.1. |
+| //resultat | Resultat de la consulta. Per més detalls consulteu [l’apartat 3.2.2.1.](#3.2.2.1) |
 
-#### 3.2.2.1 Codis de resultat
+#### 3.2.2.1 Codis de resultat <a name="3.2.2.1"></a>
 
-<lu><li></li></lu>
+
 <li>0003: TRAMITADA. Titular localitzat.
 <li>0007: IMPOSIBLE REALIZAR LA CONSULTA . EL NÚMERO MÁXIMO DE BIENES QUE PUEDEN CERTIFICAR ES DE 6000. ACOTE LA BUSQUEDA O DIRÍJASE A LA GERENCIA TERRITORIAL CORRESPONDIENTE.
 <li>0008: IMPOSIBLE REALIZAR LA CONSULTA . EL ÁMBITO ELEGIDO NO SE ENCUENTRA DENTRO DEL ÁMBITO TERRITORIAL DEL USUARIO.
@@ -365,17 +368,17 @@ continuació.
 
 #### 3.3.2.1 Codis de resultat
 
-· 0003: TRAMITADA.
-· 0014: REFERENCIA CATASTRAL INVÁLIDA (O NO TIENE 14, 18 NI 20 DÍGITOS).
-· 0017: EL INMUEBLE NO EXISTE.
-· 0018: AVISO: LA REFERENCIA CATASTRAL SOLICITADA HA SIDO MODIFICADA. LA NUEVA REFERENCIA CORRESPONDIENTE AL INMUEBLE ES:
-· 0019: EL BIEN NO SE ENCUENTRA EN EL ÁMBITO TERRITORIAL DE CONSULTA DEL USUARIO.
-· 0020: NO HAY BIENES PARA LOS DATOS DE ENTRADA.
-· 0021: EXISTE MÁS DE UN BIEN INMUEBLE PARA LOS DATOS DE ENTRADA. HAGA LA BÚSQUEDA POR REFERENCIA CATASTRAL.
-· 0022: NO ES POSIBLE LA EMISION DE LA CERTIFICACION DESCRIPTIVA Y GRAFICA PORQUE SE HA DETECTADO UNA INCONSISTENCIA EN LAS BASES DE DATOS CATASTRALES. LA CERTIFICACION PUEDE SER SOLICITADA EN LA GERENCIA O SUBGERENCIA DEL CATASTRO, DONDE SERA EMITIDA UNA VEZ CORREGIDAS DICHAS INCONSISTENCIAS.
-· 0023: CARTOGRAFÍA NO DISPONIBLE PARA DICHO MUNICIPIO.
-· 0024: NO EXISTE CARTOGRAFÍA DIGITAL ASOCIADA A ESA FINCA.
-· 0502: Error tècnic realitzant la consulta.
+<li>0003: TRAMITADA.
+<li>0014: REFERENCIA CATASTRAL INVÁLIDA (O NO TIENE 14, 18 NI 20 DÍGITOS).
+<li>0017: EL INMUEBLE NO EXISTE.
+<li>0018: AVISO: LA REFERENCIA CATASTRAL SOLICITADA HA SIDO MODIFICADA. LA NUEVA REFERENCIA CORRESPONDIENTE AL INMUEBLE ES:
+<li>0019: EL BIEN NO SE ENCUENTRA EN EL ÁMBITO TERRITORIAL DE CONSULTA DEL USUARIO.
+<li>0020: NO HAY BIENES PARA LOS DATOS DE ENTRADA.
+<li>0021: EXISTE MÁS DE UN BIEN INMUEBLE PARA LOS DATOS DE ENTRADA. HAGA LA BÚSQUEDA POR REFERENCIA CATASTRAL.
+<li>0022: NO ES POSIBLE LA EMISION DE LA CERTIFICACION DESCRIPTIVA Y GRAFICA PORQUE SE HA DETECTADO UNA INCONSISTENCIA EN LAS BASES DE DATOS CATASTRALES. LA CERTIFICACION PUEDE SER SOLICITADA EN LA GERENCIA O SUBGERENCIA DEL CATASTRO, DONDE SERA EMITIDA UNA VEZ CORREGIDAS DICHAS INCONSISTENCIAS.
+<li>0023: CARTOGRAFÍA NO DISPONIBLE PARA DICHO MUNICIPIO.
+<li>0024: NO EXISTE CARTOGRAFÍA DIGITAL ASOCIADA A ESA FINCA.
+<li>0502: Error tècnic realitzant la consulta.
 
 ## 3.4 Obtenció d’un document mitjançant CSV (DOCUMENT_CSV) <a name="3.4"></a>
 
@@ -404,12 +407,21 @@ continuació.
 | --- | --- |
 | //peticioDocumentCSV | Bloc de dades que conté la petició específica associada a la resposta. Per més detalls consulteu l’apartat anterior. |
 | //pdf | PDF generat (en base 64). |
-| //resultat | Resultat de la consulta. Per més detalls consulteu l’apartat 3.4.2.1 |
+| //resultat | Resultat de la consulta. Per més detalls consulteu [l’apartat 3.4.2.1.](#3.4.2.1) |
 
-#### 3.4.2.1 Codis de resultat
+#### 3.4.2.1 Codis de resultat <a name="3.4.2.1"></a>
 
-· 0003: TRAMITADA. CSV localitzat.
-· 2: NUMERO MAXIMO DE INTENTOS FALLIDOS
-· 3: NO EXISTE EL DOCUMENTO SOLICITADO EN EL CATALOGO.
-· 4: ERROR AL GRABAR EL NÚMERO DE PETICIONES CSV
-· 0502: Error tècnic realitzant la consulta.
+<li>0003: TRAMITADA. CSV localitzat.
+<li>2: NUMERO MAXIMO DE INTENTOS FALLIDOS
+<li>3: NO EXISTE EL DOCUMENTO SOLICITADO EN EL CATALOGO.
+<li>4: ERROR AL GRABAR EL NÚMERO DE PETICIONES CSV
+<li>0502: Error tècnic realitzant la consulta.
+
+# 4 Joc de proves
+
+L&#39;emissor final publica els següent [joc de proves a l&#39;entorn de pre-producció][proves] 
+
+[proves]: https://administracionelectronica.gob.es/ctt/svd/descargas#.YvOZNXbP2Ul
+![image](https://user-images.githubusercontent.com/32306731/137281698-9dfc2044-94f7-487f-a7d6-9a4e0707feb3.png) En cas de tindre problemes per accedir als jocs de proves, si us plau, obre un tiquet a través del [formulari][form]
+
+[form]:https://www.aoc.cat/portal-suport/peticio-integradors/idservei/integracio/
