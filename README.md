@@ -17,6 +17,7 @@
    4. [3.4 Obtenció d’un document mitjançant CSV (DOCUMENT_CSV)](#3.4)
       1. [3.4.1 Petició](#3.4.1)
       2. [3.4.2 Resposta – dades específiques](#3.4.2)
+   5. [4 Joc de proves](#4)
 
 
 # 1. Introducció <a name="1"></a>
@@ -417,11 +418,11 @@ continuació.
 <li>4: ERROR AL GRABAR EL NÚMERO DE PETICIONES CSV
 <li>0502: Error tècnic realitzant la consulta.
 
-# 4 Joc de proves
+# 4 Joc de proves <a name="4"></a>
 
 L&#39;emissor final publica els següent [joc de proves a l&#39;entorn de pre-producció][proves] 
 
 [proves]: https://administracionelectronica.gob.es/ctt/svd/descargas#.YvOZNXbP2Ul
 ![image](https://user-images.githubusercontent.com/32306731/137281698-9dfc2044-94f7-487f-a7d6-9a4e0707feb3.png) En cas de tindre problemes per accedir als jocs de proves, si us plau, obre un tiquet a través del [formulari][form]
 
-[form]:https://www.aoc.cat/portal-suport/peticio-integradors/idservei/integracio/
+[form]:https://suport.aoc.cat/hc/ca/requests/new
