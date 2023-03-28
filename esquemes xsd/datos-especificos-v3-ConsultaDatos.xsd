@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns="http://www.map.es/scsp/esquemas/datosespecificos" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.map.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified">
-	<xs:element name="DatosEspecificos" type="DatosEspecificos"/>
-	<xs:complexType name="DatosEspecificos">
-		<xs:all>
-			<xs:element name="DatosEntrada" type="DatosEntrada" minOccurs="0"/>
-			<xs:element name="listaBienesInmuebles" type="listaBienesInmuebles" minOccurs="0"/>
-			<xs:element name="Estado" type="Estado" minOccurs="0"/>
-		</xs:all>
-	</xs:complexType>
+<xs:schema xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="DatosEspecificos" >
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="DatosEntrada" type="DatosEntrada" minOccurs="0"/>
+				<xs:element name="listaBienesInmuebles" type="listaBienesInmuebles" minOccurs="0"/>
+				<xs:element name="Estado" type="Estado" minOccurs="0"/>
+			</xs:all>
+			<xs:attribute name="Id" type="xs:string" use="optional"/>
+		</xs:complexType>
+	</xs:element>
 	<xs:complexType name="DatosEntrada">
 		<xs:sequence>
 			<xs:element name="referenciaCatastral" type="rcl" minOccurs="0"/>
@@ -3012,6 +3014,7 @@
 			<xs:enumeration value="T"/>
 			<xs:enumeration value="A"/>
 			<xs:enumeration value="D"/>
+			<xs:enumeration value="L"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="modlspr">
@@ -3285,6 +3288,9 @@
 			<xs:enumeration value="RDL 1/2004 8.2b"/>
 			<xs:enumeration value="RDL 1/2004 8.2c"/>
 			<xs:enumeration value="RDL 1/2004 8.2d"/>
+			<xs:enumeration value="Almacen agrario"/>
+			<xs:enumeration value="Industrial agrario"/>
+			<xs:enumeration value="Agrario"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="ia">
@@ -4155,4 +4161,5 @@
 	<!-- CAOC -->
 	<xs:element name="DatosEntrada" type="DatosEntrada"/>
 	<xs:element name="listaBienesInmuebles" type="listaBienesInmuebles"/>
+	
 </xs:schema>
