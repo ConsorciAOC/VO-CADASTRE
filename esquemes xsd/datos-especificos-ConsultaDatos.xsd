@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified">
-	<xs:element name="DatosEspecificos" >
-		<xs:complexType>
-			<xs:all>
-				<xs:element name="DatosEntrada" type="DatosEntrada" minOccurs="0"/>
-				<xs:element name="listaBienesInmuebles" type="listaBienesInmuebles" minOccurs="0"/>
-				<xs:element name="Estado" type="Estado" minOccurs="0"/>
-			</xs:all>
-			<xs:attribute name="Id" type="xs:string" use="optional"/>
-		</xs:complexType>
+<xs:schema xmlns="http://www.map.es/scsp/esquemas/datosespecificos" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.map.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="DatosEspecificos">
+	<xs:complexType>
+		<xs:all>
+			<xs:element name="DatosEntrada" type="DatosEntrada" minOccurs="0"/>
+			<xs:element name="listaBienesInmuebles" type="listaBienesInmuebles" minOccurs="0"/>
+			<xs:element name="Estado" type="Estado" minOccurs="0"/>
+		</xs:all>
+	</xs:complexType>
 	</xs:element>
 	<xs:complexType name="DatosEntrada">
 		<xs:sequence>
@@ -4161,5 +4160,7 @@
 	<!-- CAOC -->
 	<xs:element name="DatosEntrada" type="DatosEntrada"/>
 	<xs:element name="listaBienesInmuebles" type="listaBienesInmuebles"/>
+	<xs:element name="referenciaCatastral" type="rcl" />
+	<xs:element name="referenciaRustica" type="rrl" />	
 	
 </xs:schema>

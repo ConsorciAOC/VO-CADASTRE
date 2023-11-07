@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xs:schema xmlns="http://www.map.es/scsp/esquemas/datosespecificos" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.map.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:element name="DatosEspecificos">
-	<xs:complexType>
-		<xs:all>
-			<xs:element name="DatosEntrada" type="DatosEntrada" minOccurs="0"/>
-			<xs:element name="DatosSalida" type="DatosSalida" minOccurs="0"/>
-			<xs:element name="Estado" type="Estado" minOccurs="0"/>
-		</xs:all>
-		<xs:attribute name="Id" type="xs:string" use="optional"/>
-	</xs:complexType>
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="DatosEntrada" type="DatosEntrada" minOccurs="0"/>
+				<xs:element name="DatosSalida" type="DatosSalida" minOccurs="0"/>
+				<xs:element name="Estado" type="Estado" minOccurs="0"/>
+			</xs:all>
+		</xs:complexType>
 	</xs:element>
 	<xs:complexType name="Estado">
 		<xs:all>
@@ -101,6 +100,7 @@
 	<xs:complexType name="DatosSalida">
 		<xs:sequence>
 			<xs:element name="pdf" type="xs:base64Binary" minOccurs="0"/>
+			<xs:element ref="CSV" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
 	<!-- Definicion de tipos simples-->
@@ -200,4 +200,18 @@
 			<xs:pattern value="([0-9])+"/>
 		</xs:restriction>
 	</xs:simpleType>
+	<xs:element name="CSV">
+		<xs:annotation>
+			<xs:documentation>Código Seguro de Verificación (16 caracteres)</xs:documentation>
+		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="16"/>
+				<xs:maxLength value="16"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<!-- CAOC -->
+	<xs:element name="DatosEntrada" type="DatosEntrada"/>
+	<xs:element name="DatosSalida" type="DatosSalida"/>
 </xs:schema>
