@@ -288,7 +288,9 @@ La consulta es realitza per DNI o NIE tot i que es pot acotar l’àmbit de la c
 
 L’schema associat a la petició especifica es detalla a continuació.
 
-![image](https://user-images.githubusercontent.com/32306731/144576061-11c0c05b-2baf-4b67-a69e-dd6fce07d015.png)
+<p align="center">
+<img align="center" src="img/0.png" />
+</p>
 
 | _Element_ | _Descripció_ |
 | --- | --- |
@@ -301,7 +303,9 @@ localització de l’immoble. |
 
 ### 3.2.2 Resposta – dades específiques <a name="3.2.2"></a>
 
-![image](https://user-images.githubusercontent.com/32306731/144576737-27ce3156-c2b2-486e-861e-81417778d57b.png)
+<p align="center">
+<img align="center" src="img/1.png" />
+</p>
 
 De l’schema associat a la resposta especifica, el servei informa les dades que es detallen a
 continuació.
@@ -310,6 +314,7 @@ continuació.
 | --- | --- |
 | //peticioCertificacioTitular | Bloc de dades que conté la petició específica associada a la resposta. Per més detalls consulteu l’apartat anterior. |
 | //DatosSalida/pdf | PDF del certificat en base 64. |
+| //DatosSalida/CSV| CSV del document obtingut|
 | //DatosSalida/listaNombres/nombreApellidos | Nom complert del titular. |
 | //resultat | Resultat de la consulta. Per més detalls consulteu [l’apartat 3.2.2.1.](#3.2.2.1) |
 
@@ -356,7 +361,9 @@ municipi segons l’INE |
 
 ### 3.3.2 Resposta – dades específiques <a name="3.3.2"></a>
 
-![image](https://user-images.githubusercontent.com/32306731/144580001-4e17e452-58f0-4ca5-a3f4-d1fec7332b27.png)
+<p align="center">
+<img align="center" src="img/2.png" />
+</p>
 
 De l’schema associat a la resposta especifica, el servei informa les dades que es detallen a
 continuació.
@@ -365,7 +372,8 @@ continuació.
 | --- | --- |
 | //peticioDescriptivaIGrafica | Bloc de dades que conté la petició específica associada a la resposta. Per més detalls consulteu l’apartat anterior. |
 | //DatosSalida/pdf | PDF del certificat en base 64. |
-| //resultat | Resultat de la consulta. Per més detalls consulteu l’apartat 3.2.2.1. |
+| //DatosSalida/CSV | CSV del certificat.
+| //resultat | Resultat de la consulta. Per més detalls consulteu [l’apartat 3.2.2.1.](#3.2.2.1) |
 
 #### 3.3.2.1 Codis de resultat
 
