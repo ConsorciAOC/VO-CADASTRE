@@ -4091,7 +4091,7 @@
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:length value="2"/>
-			<xs:pattern value="\d{2}"/>
+			<xs:pattern value="\d{1,2}"/>
 			<!--<xs:pattern value="(0[1-9])|([1-4][0-9])|(5[0-2])"/>-->
 		</xs:restriction>
 	</xs:simpleType>
