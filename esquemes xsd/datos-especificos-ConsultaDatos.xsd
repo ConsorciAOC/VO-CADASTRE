@@ -4090,7 +4090,7 @@
 			<xs:documentation>Código de la provincia</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:length value="2"/>
+			<xs:maxLength value="2"/>
 			<xs:pattern value="\d{1,2}"/>
 			<!--<xs:pattern value="(0[1-9])|([1-4][0-9])|(5[0-2])"/>-->
 		</xs:restriction>
